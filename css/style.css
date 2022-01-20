@@ -1,0 +1,702 @@
+/*Glboales*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', impact, sans serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+main{
+    background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
+}
+
+h2{
+    font-size: 35px;
+}
+
+h3{
+    font-size: 30px;
+}
+h4{
+    font-size: 20px;
+}
+h5{
+    font-size: 15px;
+}
+h6{
+    font-size: 10px;
+}
+p{
+    font-family: 'Archivo Narrow', sans-serif;
+}
+input{
+    font-family: 'Times New Roman', Times, serif;
+}
+textarea{
+    font-family: 'Times New Roman', Times, serif;
+}
+ul{
+    list-style: none;
+}
+
+/*HEADER*/
+header{
+    height: 20vh;
+    width: 100%;
+    background-color: rgb(175 255 226);
+    color: rgb(78 32 112);
+    position: relative;
+    overflow: hidden;
+}
+/* h1{
+    font-size: 60px;
+    position: absolute;
+    left: 2vw;
+}
+*/ 
+
+.subtitulo{
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+.logo-contenedor{
+    position: absolute;
+    top: -4%;
+    left: 10px;
+}
+.logo-img{
+    height: 150px;
+}
+.logo-img img{
+    height: 100%;
+    width: auto;
+    /*border-style: solid;
+    border-width: 3px;
+    border-color: rgb(63 0 255);
+    border-radius: 20%;*/
+}
+
+.logo-img:hover{
+    filter: opacity(70%);
+}
+
+/*NAV*/
+nav{
+    position: sticky;
+    top: 0;
+    background-color:  #4bc3c6;
+    height: 50px;
+    width: 100%;
+}
+
+nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    letter-spacing: 0.12em;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 25px;
+    color: black;;
+}
+nav ul li a:hover{
+    filter: opacity(60%);
+}
+
+
+/*MAIN INDEX*/
+#main-index{
+    width: 100%;
+    height: 1300px;
+    /*
+    Cambio el color porque me parece que son demasiados colores y distrae.
+    background-color: rgb(253, 234, 128);
+    */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+h1{
+    position: inherit;
+    font-size: 50px;
+}
+
+#main-grid{
+    display: grid;
+    height: 1100px;
+    width: 95%;
+/*    background-color: rgb(149, 238, 241); */
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 400px 500px 200px;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-areas: "a1 a1"
+                         "a2 a3"
+                         "a4 a5";
+    justify-content: center;
+}
+
+
+#descripcion{
+    height: 100%;
+    width: 100%;
+    grid-area: a2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#foto-descripcion{
+    grid-area: a3;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+#foto-descripcion img{
+    width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+
+.carrousel{
+    grid-area: a1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carrousel img{
+    height: 100%;
+    width: auto;
+}
+
+/*
+.aliados-news{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+*/
+
+
+.aliadxs{
+    grid-area: a4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.aliados-links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.aliados-links img{
+    width: 13vw;
+    height: auto;
+    filter: drop-shadow(2px 2px 10px #666666);
+}
+.aliados-links img:hover{
+    filter: opacity(90%);
+}
+
+#logo-bikon img{
+    width: 15vw;
+    height: auto;
+}
+
+.newsletter{
+    grid-area: a5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/*MAIN Agenda*/
+#main-agenda{
+    width: 100%;
+    height: 700px;
+    /*
+    Cambio el color porque me parece que son demasiados colores y distrae.
+    background-color: rgb(253, 234, 128);
+    */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+table tr td {
+    border:2px solid  rgb(78 28 113 / 70%);
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #acdfe3;
+}
+
+table{
+    width: 93%;
+}
+
+/*MAIN Galería*/
+#main-galeria{
+    width: 100%;
+    height: 1150px;
+    /*
+    Cambio el color porque me parece que son demasiados colores y distrae.
+    background-color: rgb(253, 234, 128);
+    */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    align-content: space-evenly;
+}
+
+
+#galeria{
+    display: grid;
+    height: 1000px;
+    width: 95%;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 30% 30% 30%;
+    grid-template-areas: "a1 a2 a3"
+                         "a4 a5 a7"
+                         "a6 a8 a7";
+    column-gap: 10px;
+    row-gap: 10px;
+/*    background-color: rgb(216, 211, 171); */
+    align-content: space-between;
+    justify-content: center;
+}
+#galeria div img{
+    height: auto;
+    width: 100%;
+}
+
+#foto01{
+    grid-area:a1;
+}
+#foto02{
+    grid-area:a2;
+}
+#foto03{
+    grid-area:a3;
+}
+#foto04{
+    grid-area:a4;
+}
+#foto05{
+    grid-area:a5;
+}
+#foto06{
+    grid-area:a6;
+}
+#foto07{
+    grid-area:a7;
+}
+#foto08{
+    grid-area:a8;
+}
+
+
+
+
+/*
+#fotos-galeria1{
+    height: 275px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#fotos-galeria2{
+    height: 275px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.horizontal{
+    margin: 10px;
+    height: 200px;
+    width: auto;
+}
+.vertical{
+    margin: 10px;
+    height: 300px;
+    width: auto;
+}
+
+
+*/
+
+
+
+/*MAIN Almacén*/
+#main-almacen{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+#section-almacen{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#link-almacen{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: auto;
+    border-radius: 10%;
+}
+
+#link-almacen:hover{
+    filter: opacity(90%);
+}
+
+#p-almacen{
+    text-align: justify;
+    justify-content: center;
+}
+#instagram-almacen img:hover{
+    filter: opacity(80%);
+}
+
+/*MAIN Contacto*/
+#main-contacto{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section-contacto{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*
+#contenedor-form form textarea{
+    position: relative;
+    bottom: 30px;
+}
+
+#contacto-email{
+    position: absolute;
+    left: 70vw;
+    bottom: 85px;
+
+}
+#contacto-enviar{
+    position:absolute;
+    bottom: 70px;
+    bottom: 85px;
+}
+*/
+#contacto-p{
+
+    font-style: oblique;
+}
+
+/*FOOTER*/
+
+footer{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(102 40 147);
+    background-image: url(../img/redes01.png);
+    background-position-y: 20%;
+    overflow-y: hidden;
+}
+#footer-title{
+    color: white;
+    position: relative;
+    left: 2%;
+    top: 20px;
+    font-size: 15px;
+    text-shadow: 3px 3px 5px #000;
+}
+#footer-direccion{
+    color: white;
+    position: relative;
+    left: 2%;
+    top: 30px;
+    font-size: 15px;
+    text-shadow: 3px 3px 5px #000;
+}
+
+.favicons{
+    height: 100%;
+    width: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    bottom: 31px;
+    margin-right: 20px;
+}
+
+.favicons img:hover{
+    filter: opacity(80%);
+}
+
+#facebook-img{
+    height: 50px;
+    width: auto;
+    margin: 10px;
+    bottom: 30px;
+}
+
+#instagram-img{
+    height: 50px;
+    width: auto;
+    margin: 10px;
+    bottom: 30px;
+}
+
+#whatsapp-img{
+    height: 50px;
+    width: auto;
+    margin: 10px;
+    bottom: 30px;
+}
+
+
+
+
+
+/*MEDIA MOBILE*/
+@media only screen and (max-width:320px){
+    
+    /*HEADER*/
+    header{
+        height: 25vh;
+    }
+    .logo-img{
+        height: 100px;
+        margin-top: 8px;
+        margin-left: -13px;
+    }
+    .subtitulo{
+        font-size: 20px;
+    }
+
+    /*NAV*/
+    nav{
+        height: 40px;
+    }
+
+
+    nav ul li a{
+        font-size: 20px;
+        letter-spacing: 0.004em;
+    }
+
+    /*MAIN INDEX*/
+    #main-index{
+        height: 1300px;
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    h2{
+        font-size: 25px;
+    }
+
+    #main-grid{
+        display: grid;
+        height: 1150px;
+        grid-template-columns: 95%;
+        grid-template-rows: 20% 20% 23% 18% 14%;
+        grid-template-areas:"a1"
+                            "a2"
+                            "a3"
+                            "a4"
+                            "a5";
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+
+
+
+        .aliadxs{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .aliados-links{
+            display: flex;
+            flex-direction: column-reverse;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .aliados-links img{
+            width: 40vw;
+            padding: 5px;
+        }
+        .aliados-links img:hover{
+            filter: opacity(90%);
+        }
+
+        #logo-bikon img{
+            width: 45vw;
+        }
+
+        .newsletter{
+            grid-area: a5;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        /*MAIN Agenda*/
+        #main-agenda{
+            height: 620px;
+        }
+
+        /*MAIN Galeria*/
+
+        #main-galeria{
+            height: 2300px;
+        }
+
+        #galeria{
+            height: 2176px;
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(8, 1fr);
+            grid-template-areas:"a1"
+                                "a2"
+                                "a3"
+                                "a4"
+                                "a7"
+                                "a7"
+                                "a5"
+                                "a6"
+                                "a8";
+            justify-content: center;
+        }
+
+
+
+
+
+        /*MAIN Almacen*/
+
+        #main-almacen{
+            height: 500px;
+        }
+
+
+        /*FOOTER*/
+
+    footer{
+        height: 80px;
+    }
+    #footer-title{
+        /*
+        left: 2%;
+        top: 20px;
+        */
+        font-size: 13spx;
+    }
+    #footer-direccion{
+        /*
+        left: 2%;
+        top: 30px;
+        */
+        font-size: 13px;
+    }
+
+    .favicons{
+        height: 100%;
+        width: auto;
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: -5px;
+    }
+
+    #facebook-img{
+        height: 40px;
+    }
+
+    #instagram-img{
+        height: 40px;
+    }
+
+    #whatsapp-img{
+        height: 40px;
+    }
+
+
+
+
+
+}
