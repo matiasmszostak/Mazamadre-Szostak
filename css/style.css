@@ -46,7 +46,8 @@ ul{
 header{
     height: 20vh;
     width: 100%;
-    background-color: rgb(175 255 226);
+/*    background-color: rgb(175 255 226); */
+    background: linear-gradient(135deg, white, #4bc3c6);
     color: rgb(78 32 112);
     position: relative;
     overflow: hidden;
