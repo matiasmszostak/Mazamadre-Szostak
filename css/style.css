@@ -72,7 +72,7 @@ header{
     left: 10px;
 }
 .logo-img{
-    height: 150px;
+    height: 21vh;
 }
 
 .logo-img img{
@@ -524,8 +524,6 @@ footer{
 
 
 
-
-
 /*MEDIA MOBILE*/
 @media only screen and (max-width:320px){
     
@@ -534,7 +532,7 @@ footer{
         height: 25vh;
     }
     .logo-img{
-        height: 100px;
+        height: 18vh;
         margin-top: 8px;
         margin-left: -13px;
     }
