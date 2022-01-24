@@ -74,6 +74,7 @@ header{
 .logo-img{
     height: 150px;
 }
+
 .logo-img img{
     height: 100%;
     width: auto;
@@ -86,6 +87,7 @@ header{
 .logo-img:hover{
     filter: opacity(70%);
 }
+
 
 /*NAV*/
 nav{
@@ -114,6 +116,7 @@ nav ul li a{
 }
 nav ul li a:hover{
     filter: opacity(60%);
+    font-size: 26px;
 }
 
 
