@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro Cultural Mazamadre - Contacto</title>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
     <link rel="icon" href="../img/logotipo-01.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-
+    <title>Centro Cultural Mazamadre - Contacto</title>
 
 </head>
 
@@ -29,33 +34,42 @@
         <h3 class="subtitulo">Un espacio donde pasan cosas...</h3>
     </header>
 
-    <nav>
-        <ul>
-            <li>
-                <a href="../index.html">Home</a>
-            </li>
-            <li>
-                <a href="agenda.html">Agenda</a>
-            </li>
-            <li>
-                <a href="galeria.html">Galeria</a>
-            </li>
-            <li>
-                <a href="almacen.html">Almacén</a>
-            </li>
-            <li>
-                <a href="contacto.html">Contacto</a>
-            </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"
+                style="background-color: rgb(75, 195, 198, 0.95);">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agenda.html">Agenda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.html">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="almacen.html">Almacén</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <main id="main-contacto">
 
         <section id="section-contacto">
             <h1>CONTACTO</h1>
-            <p id="contacto-p">¡Mandanos un mensaje y nos ponemos en contacto!</p>
 
-            <div id="contenedor-form">
+<!--            <div id="contenedor-form">
                 <form class="form-contacto" action="#">
                     <textarea name="mensaje" id="mensaje" cols="40" rows="10"
                         placeholder="Escriba un mensaje..."></textarea>
@@ -63,6 +77,20 @@
                     <button id="contacto-enviar">Enviar</button>
                 </form>
             </div>
+-->
+
+<div class="mb-3">
+    <form action="#">
+    <label for="exampleFormControlInput1" class="form-label" id="contacto-email">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Dejanos tu mensaje"></textarea>
+    <button type="button" class="btn btn-outline-info" id="newsletter-enviar">Enviar</button>
+</form>  
+</div>
+
             <div id="div-ubicacion">
                 <h2>Vení a visitarnos</h2>
                 <p>Estamos ubicadxs en Maza 1284, CABA. En el barrio de Boedo, entre las calles Constitución y Tarija.
@@ -73,9 +101,10 @@
     </main>
 
     <footer>
-        <h6 id="footer-title">Mazamadre Centro Cultural</h6>
-        <h6 id="footer-direccion">Maza 1284, C1240 CABA</h6>
-
+        <div id="footer-datos">
+            <h6 id="footer-title">Mazamadre Centro Cultural</h6>
+            <h6 id="footer-direccion">Maza 1284, C1240 CABA</h6>
+        </div>
         <div class="favicons">
             <a href="https://www.facebook.com/MazaMadre">
                 <img id="facebook-img" src="../img/favicon-facebook.png" alt="Facebook">

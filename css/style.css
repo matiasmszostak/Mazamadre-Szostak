@@ -9,6 +9,7 @@ body{
     overflow-x: hidden;
 }
 
+
 main{
     background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
 }
@@ -63,7 +64,7 @@ header{
     font-size: 30px;
     position: absolute;
     right: 20px;
-    bottom: 10px;
+    bottom: -5px;
 }
 
 .logo-contenedor{
@@ -94,8 +95,9 @@ nav{
     position: sticky;
     top: 0;
     background-color:  #4bc3c6;
-    height: 50px;
+    height: 53px;
     width: 100%;
+    z-index: 2;
 }
 
 nav ul{
@@ -115,7 +117,7 @@ nav ul li a{
     color: black;;
 }
 nav ul li a:hover{
-    filter: opacity(60%);
+    filter: opacity(100%);
     font-size: 26px;
 }
 
@@ -184,15 +186,16 @@ h1{
 
 .carrousel{
     grid-area: a1;
-    height: 100%;
-    width: 100%;
+    height: 394px;
+    width: 545px;
     display: flex;
-    justify-content: center;
+    justify-self: center;
+    z-index: 1;
 }
 
 .carrousel img{
-    height: 100%;
-    width: auto;
+    height: 394px;
+    width: 545px;
 }
 
 /*
@@ -245,6 +248,9 @@ h1{
     justify-content: space-evenly;
     align-items: center;
 }
+#newsletter-enviar{
+    margin-top: 10px;
+}
 
 
 /*MAIN Agenda*/
@@ -264,7 +270,6 @@ h1{
 
 table tr td {
     border:1px solid  rgb(27 20 32 / 70%);
-    border-radius: 5px;
     padding: 15px;
     background-color: #acdfe3;
     background: linear-gradient(135deg, white, #a2e0e2);
@@ -421,7 +426,7 @@ table{
 /*MAIN Contacto*/
 #main-contacto{
     width: 100%;
-    height: 550px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -435,6 +440,15 @@ table{
     flex-wrap: nowrap;
     justify-content: space-evenly;
     align-items: center;
+}
+
+#exampleFormControlTextarea1{
+    width: 75vw;
+    max-height: 25vh;
+}
+
+#contacto-email{
+    width: 75vw;
 }
 
 /*
@@ -455,10 +469,6 @@ table{
     bottom: 85px;
 }
 */
-#contacto-p{
-
-    font-style: oblique;
-}
 
 /*FOOTER*/
 
@@ -469,31 +479,41 @@ footer{
     background-image: url(../img/redes01.png);
     background-position-y: 20%;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
+
+#footer-datos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    height: 100%;
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+
 #footer-title{
     color: white;
-    position: relative;
-    left: 2%;
-    top: 20px;
     font-size: 15px;
     text-shadow: 3px 3px 5px #000;
+    flex-wrap: wrap;
 }
 #footer-direccion{
     color: white;
-    position: relative;
-    left: 2%;
-    top: 30px;
     font-size: 15px;
     text-shadow: 3px 3px 5px #000;
+    flex-wrap: wrap;
 }
 
 .favicons{
     height: 100%;
     width: auto;
-    position: relative;
+    position: sticky;
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
+    align-items: center;
     bottom: 31px;
     margin-right: 20px;
 }
@@ -543,7 +563,7 @@ footer{
 
     /*NAV*/
     nav{
-        height: 40px;
+        height: 60px;
     }
 
 
@@ -580,7 +600,18 @@ footer{
         row-gap: 10px;
     }
 
-
+    .carrousel{
+        grid-area: a1;
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-self: center;
+    }
+    
+    .carrousel img{
+        height: auto;
+        width: 100%;
+    }
 
         .aliadxs{
             display: flex;
@@ -617,6 +648,7 @@ footer{
             align-items: center;
         }
 
+
         /*MAIN Agenda*/
         #main-agenda{
             height: 620px;
@@ -648,12 +680,24 @@ footer{
 
 
 
-        /*MAIN Almacen*/
+    /*MAIN Almacen*/
 
-        #main-almacen{
-            height: 500px;
-        }
+    #main-almacen{
+        height: 550px;
+    }
+    #main-almacen #instagram-img{
+        bottom: 10px;
+        height: 50px;
+    }
 
+        /*MAIN Contacto*/
+    #main-contacto{
+        height: 600px;
+    }
+    #exampleFormControlTextarea1{
+        width: 90vw;
+        max-height: 30vh;
+    }
 
         /*FOOTER*/
 
@@ -676,26 +720,19 @@ footer{
     }
 
     .favicons{
-        height: 100%;
-        width: auto;
-        position: relative;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: flex-end;
-        align-items: center;
         margin-right: -5px;
     }
 
     #facebook-img{
-        height: 40px;
+        height: 35px;
     }
 
     #instagram-img{
-        height: 40px;
+        height: 35px;
     }
 
     #whatsapp-img{
-        height: 40px;
+        height: 35px;
     }
 
 
@@ -703,3 +740,7 @@ footer{
 
 
 }
+
+
+
+
