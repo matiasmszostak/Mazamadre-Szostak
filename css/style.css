@@ -95,7 +95,7 @@ nav{
     position: sticky;
     top: 0;
     background-color:  #4bc3c6;
-    height: 53px;
+    height: 55px;
     width: 100%;
     z-index: 2;
 }
@@ -142,13 +142,13 @@ h1{
     font-size: 50px;
 }
 
-#main-grid{
+#main-grid-index{
     display: grid;
     height: 1100px;
     width: 95%;
 /*    background-color: rgb(149, 238, 241); */
     grid-template-columns: 45% 45%;
-    grid-template-rows: 400px 500px 200px;
+    grid-template-rows: 34% 44% 19%;
     column-gap: 10px;
     row-gap: 10px;
     grid-template-areas: "a1 a1"
@@ -282,7 +282,7 @@ table{
 /*MAIN Galería*/
 #main-galeria{
     width: 100%;
-    height: 1150px;
+    height: 1300px;
     /*
     Cambio el color porque me parece que son demasiados colores y distrae.
     background-color: rgb(253, 234, 128);
@@ -297,22 +297,22 @@ table{
 }
 
 
-#galeria{
+#grid-galeria{
     display: grid;
     height: 1000px;
     width: 95%;
     grid-template-columns: 30% 30% 30%;
     grid-template-rows: 30% 30% 30%;
-    grid-template-areas: "a1 a2 a3"
+    grid-template-areas: "a1 a2 a7"
                          "a4 a5 a7"
-                         "a6 a8 a7";
+                         "a6 a8 a3";
     column-gap: 10px;
     row-gap: 10px;
 /*    background-color: rgb(216, 211, 171); */
     align-content: space-between;
     justify-content: center;
 }
-#galeria div img{
+#grid-galeria div img{
     height: auto;
     width: 100%;
 }
@@ -337,7 +337,13 @@ table{
 }
 #foto07{
     grid-area:a7;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    margin-top: 2em;
 }
+
 #foto08{
     grid-area:a8;
 }
@@ -384,7 +390,7 @@ table{
 /*MAIN Almacén*/
 #main-almacen{
     width: 100%;
-    height: 700px;
+    height: 800px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -422,14 +428,18 @@ table{
 #instagram-almacen img:hover{
     filter: opacity(80%);
 }
+#main-almacen #instagram-img{
+    height: 75px;
+}
 
 /*MAIN Contacto*/
 #main-contacto{
     width: 100%;
-    height: 600px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 #section-contacto{
@@ -446,9 +456,16 @@ table{
     width: 75vw;
     max-height: 25vh;
 }
+.form-control{
+    width: 50%;
+}
 
 #contacto-email{
     width: 75vw;
+}
+
+#div-ubicacion{
+    text-align: center;
 }
 
 /*
@@ -495,15 +512,17 @@ footer{
 
 #footer-title{
     color: white;
-    font-size: 15px;
+    font-size: 22px;
     text-shadow: 3px 3px 5px #000;
     flex-wrap: wrap;
+    margin: 0;
 }
 #footer-direccion{
     color: white;
-    font-size: 15px;
+    font-size: 19px;
     text-shadow: 3px 3px 5px #000;
     flex-wrap: wrap;
+    margin: 0;
 }
 
 .favicons{
@@ -543,9 +562,181 @@ footer{
     bottom: 30px;
 }
 
+/*ANIMACIONES*/
+
+.transition-fade {
+    opacity: 1;
+    transition: 500ms;
+    transform: translateX(0);
+    transform-origin: left;
+  }
+  
+  html.is-animating .transition-fade {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+  
+  html.is-leaving .transition-fade {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  
 
 
-/*MEDIA MOBILE*/
+
+
+
+
+
+
+/*MEDIA QUERY TABLET 768px*/
+@media only screen and (max-width:768px){
+    
+    h2{
+       font-size: 32px; 
+    }
+
+    /*HEADER*/
+    header{
+        height: 22vh;
+    }
+    .logo-img{
+        height: 18vh;
+        margin-top: 8px;
+        margin-left: -13px;
+    }
+    .subtitulo{
+        font-size: 25px;
+    }
+
+    /*NAV*/
+    nav{
+        height: 55px;
+    }
+
+
+    nav ul li a{
+        font-size: 20px;
+        letter-spacing: 0.004em;
+    }
+
+    /*MAIN INDEX*/
+    #main-index{
+        height: 1150px;
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    #main-grid-index{
+        height: 950px;
+        grid-template-rows: 36% 44% 15%;
+    }
+
+
+        .aliados-links{
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+        }
+
+        .aliados-links img{
+            width: 20vw;
+            padding: 5px;
+        }
+
+        #logo-bikon img{
+            width: 25vw;
+        }
+
+        #newsletter-h2{
+            align-self: center;
+            justify-self: center;
+        }
+
+        /*MAIN Agenda*/
+        #main-agenda{
+            height: 700px;
+        }
+
+        /*MAIN Galeria*/
+
+        #main-galeria{
+            height: 1400px;
+        }
+
+        #grid-galeria{
+            height: 1200px;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas: "a1 a2"
+                                 "a5 a8"
+                                 "a3 a7"
+                                 "a6 a7";
+        }
+
+        #foto07{
+            margin-top: 0;
+        }
+
+
+    /*MAIN Almacen*/
+
+    #main-almacen{
+        height: 700px;
+    }
+    #main-almacen #instagram-img{
+        height: 60px;
+    }
+
+    .cont-img-almacen{
+        width: 90vw;
+    }
+    #link-almacen{
+        width: 100%;
+        justify-self: center;
+        margin: 0;
+    }
+
+        /*MAIN Contacto*/
+    #main-contacto{
+        height: 700px;
+    }
+    #exampleFormControlTextarea1{
+        width: 90vw;
+        max-height: 30vh;
+    }
+    .form-control{
+        width: 100%;
+    }
+    #exampleFormControlInput1{
+        width: 50vw;
+    }
+
+
+        /*FOOTER*/
+
+    #footer-title{
+        /*
+        left: 2%;
+        top: 20px;
+        */
+        font-size: 20px;
+    }
+    #footer-direccion{
+        font-size: 18px;
+    }
+
+    .favicons{
+        margin-right: 0;
+    }
+
+}
+
+
+
+/*MEDIA QUERY MOBILE 320px*/
 @media only screen and (max-width:320px){
     
     /*HEADER*/
@@ -586,7 +777,7 @@ footer{
         font-size: 25px;
     }
 
-    #main-grid{
+    #main-grid-index{
         display: grid;
         height: 1150px;
         grid-template-columns: 95%;
@@ -647,23 +838,35 @@ footer{
             justify-content: space-evenly;
             align-items: center;
         }
-
+        .newsletter form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .newsletter form div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
 
         /*MAIN Agenda*/
         #main-agenda{
-            height: 620px;
+            height: 900px;
         }
 
         /*MAIN Galeria*/
 
         #main-galeria{
-            height: 2300px;
+            height: 2475px;
         }
 
-        #galeria{
-            height: 2176px;
+        #grid-galeria{
+            height: 2350px;
             grid-template-columns: 100%;
-            grid-template-rows: repeat(8, 1fr);
+            grid-template-rows: repeat(9, 1fr);
             grid-template-areas:"a1"
                                 "a2"
                                 "a3"
@@ -690,6 +893,15 @@ footer{
         height: 50px;
     }
 
+    .cont-img-almacen{
+        width: 99vw;
+    }
+    #link-almacen{
+        width: 100%;
+        justify-self: center;
+        margin: 0;
+    }
+
         /*MAIN Contacto*/
     #main-contacto{
         height: 600px;
@@ -698,6 +910,10 @@ footer{
         width: 90vw;
         max-height: 30vh;
     }
+    .form-control{
+        width: 100%;
+    }
+
 
         /*FOOTER*/
 
@@ -709,14 +925,14 @@ footer{
         left: 2%;
         top: 20px;
         */
-        font-size: 13spx;
+        font-size: 17px;
     }
     #footer-direccion{
         /*
         left: 2%;
         top: 30px;
         */
-        font-size: 13px;
+        font-size: 15px;
     }
 
     .favicons{
@@ -734,13 +950,4 @@ footer{
     #whatsapp-img{
         height: 35px;
     }
-
-
-
-
-
 }
-
-
-
-

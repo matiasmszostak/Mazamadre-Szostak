@@ -11,11 +11,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <!--WOW-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="js/wow.min.js"></script>
+
     <link rel="icon" href="../img/logotipo-01.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/wow.css">
     <title>Centro Cultural Mazamadre - Galeria</title>
 </head>
 
@@ -23,14 +28,14 @@
 
     <header>
         <!--        <h1>Mazamadre Centro Cultural</h1>     -->
-        <div class="logo-contenedor">
+        <div class="logo-contenedor animate__animated animate__fadeInRight">
             <div class="logo-img">
-                <a href="../index.html">
+                <a href="index.html">
                     <img src="../img/logotipo-01.png" alt="Logo Mazamadre">
                 </a>
             </div>
         </div>
-        <h3 class="subtitulo">Un espacio donde pasan cosas...</h3>
+        <h2 class="subtitulo animate__animated animate__fadeInRight">Un espacio donde pasan cosas...</h2>
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -64,31 +69,32 @@
     </nav>
 
     <main id="main-galeria">
-        <h1>GALERIA</h1>
-        <div id="galeria">
+        <h1 class="animate__animated animate__fadeInRight">GALERIA</h1>
+        <div id="grid-galeria">
             <div id="foto01">
-                <img class="horizontal" src="../img/01.jpg" alt="Ejemplo 01">
+                <img class="horizontal wow animate__animated animate__fadeInLeft" src="../img/01.jpg" alt="Ejemplo 01">
             </div>
             <div id="foto02">
-                <img class="horizontal" src="../img/02.jpg" alt="Ejemplo 02">
+                <img class="horizontal wow animate__animated animate__fadeInUp" src="../img/02.jpg" alt="Ejemplo 02">
             </div>
             <div id="foto03">
-                <img class="horizontal" src="../img/03.JPG" alt="Ejemplo 03">
+                <img class="horizontal wow animate__animated animate__fadeInRight" src="../img/03.JPG" alt="Ejemplo 03">
             </div>
             <div id="foto04">
-                <img class="horizontal" src="../img/04.JPG" alt="Ejemplo 04">
+                <img class="horizontal wow animate__animated animate__fadeInLeft" src="../img/04.JPG" alt="Ejemplo 04">
             </div>
             <div id="foto05">
-                <img class="horizontal" src="../img/05.JPG" alt="Ejemplo 05">
+                <img class="horizontal wow animate__animated animate__fadeInUp" src="../img/05.JPG" alt="Ejemplo 05">
             </div>
             <div id="foto06">
-                <img class="horizontal" src="../img/06.jpg" alt="Ejemplo 06">
+                <img class="horizontal wow animate__animated animate__fadeInLeft" src="../img/06.jpg" alt="Ejemplo 06">
             </div>
             <div id="foto07">
-                <img class="vertical" src="../img/07.jpg" alt="Ejemplo 07">
+                <img class="vertical wow animate__animated animate__fadeInRight" src="../img/07.jpg" alt="Ejemplo 07">
             </div>
             <div id="foto08">
-                <img id="foto08" class="horizontal" src="../img/08.jpg" alt="Ejemplo 08">
+                <img id="foto08" class="horizontal wow animate__animated animate__fadeInUp" src="../img/08.jpg"
+                    alt="Ejemplo 08">
             </div>
         </div>
     </main>

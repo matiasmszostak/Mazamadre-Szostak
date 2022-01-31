@@ -11,6 +11,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <!--Animate-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--WOW-->
+    <script src="js/wow.min.js"></script>
+
     <link rel="icon" href="img/logotipo-01.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,21 +26,21 @@
         href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/wow.css">
     <title>Centro Cultural Mazamadre - Home</title>
 </head>
 
 <body>
 
     <header>
-        <!--        <h1>Mazamadre Centro Cultural</h1>     -->
-        <div class="logo-contenedor">
+        <div class="logo-contenedor animate__animated animate__fadeInRight">
             <div class="logo-img">
                 <a href="index.html">
                     <img src="img/logotipo-01.png" alt="Logo Mazamadre">
                 </a>
             </div>
         </div>
-        <h2 class="subtitulo">Un espacio donde pasan cosas...</h2>
+        <h2 class="subtitulo animate__animated animate__fadeInRight">Un espacio donde pasan cosas...</h2>
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -52,16 +57,16 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="html/agenda.html">Agenda</a>
+                        <a class="nav-link active" href="html/agenda.html">Agenda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="html/galeria.html">Galeria</a>
+                        <a class="nav-link active" href="html/galeria.html">Galeria</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="html/almacen.html">Almacén</a>
+                        <a class="nav-link active" href="html/almacen.html">Almacén</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="html/contacto.html">Contacto</a>
+                        <a class="nav-link active" href="html/contacto.html">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -90,23 +95,12 @@
     </nav>
 
     <main id="main-index">
-        <h1>Mazamadre Centro Cultural</h1>
+        <h1 class="animate__animated animate__fadeInRight">Mazamadre Centro Cultural</h1>
 
-        <section id="main-grid">
-            <article id="descripcion">
-                <!--Descripción del lugar-->
-                <h2>Sobre Maza</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-                    Officia, quia! Dolores ipsum in ea natus deserunt voluptatem! <br>
-                    Fugiat accusamus natus voluptates id reprehenderit illum deserunt <br>
-                    molestias eveniet aliquam, corrupti beatae!</p>
-            </article>
-            <div id="foto-descripcion">
-                <img src="img/ejemplo-home.jpg" alt="Espectadores presencian un show">
-            </div>
+        <section id="main-grid-index">
 
             <!--CARROUSEL DE FOTOS-->
-            <article class="carrousel">
+            <article class="carrousel wow animate__animated animate__fadeInUp">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -122,13 +116,13 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/carrusel-07.jpg" class="d-block w-100" alt="Cartel Mazamadre">
-                        </div>
-                        <div class="carousel-item">
                             <img src="img/carrusel-04.jpg" class="d-block w-100" alt="Vitro">
                         </div>
                         <div class="carousel-item">
                             <img src="img/carrusel-01.jpg" class="d-block w-100" alt="Grupo de jóvenes">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carrusel-07.jpg" class="d-block w-100" alt="Cartel Mazamadre">
                         </div>
                         <div class="carousel-item">
                             <img src="img/carrusel-03.jpg" class="d-block w-100" alt="Cantante en tono cálido">
@@ -150,10 +144,22 @@
                 </div>
             </article>
 
+            <article id="descripcion">
+                <!--Descripción del lugar-->
+                <h2 class="wow animate__animated animate__fadeInLeft">Sobre Maza</h2>
+                <p class="wow animate__animated animate__fadeInLeft">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                    Officia, quia! Dolores ipsum in ea natus deserunt voluptatem! <br>
+                    Fugiat accusamus natus voluptates id reprehenderit illum deserunt <br>
+                    molestias eveniet aliquam, corrupti beatae!</p>
+            </article>
+            <div id="foto-descripcion" class="wow animate__animated animate__fadeInRight">
+                <img src="img/ejemplo-home.jpg" alt="Espectadores presencian un show">
+            </div>
 
-            <article class="aliadxs">
+            <article class="aliadxs wow animate__animated animate__fadeInRight">
 
-                <h2 id="aliadxs-h">Aliadxs</h2>
+                <h2 id="aliadxs-h">Aliades</h2>
 
                 <div class="aliados-links">
                     <div id="logo-bikon">
@@ -174,22 +180,23 @@
 
             </article>
 
-            <article class="newsletter">
-                <h2>Sumate a nuestro newsletter</h2>
+            <article class="newsletter wow animate__animated animate__fadeInRight">
+                <h2 id="newsletter-h2">Sumate a nuestro newsletter</h2>
                 <form action="#">
                     <div id="form-nombre-apellido">
                         <input type="text" placeholder="Nombre">
                         <input type="text" placeholder="Apellido">
                     </div>
                     <div id="form-email-celular">
-                        <input type="email" placeholder="Email">
-                        <input type="text" placeholder="Celular">
+                        <input type="email" placeholder="nombre@email.com">
+                        <input type="text" placeholder="Celular (opcional)">
                     </div>
                     <button type="button" class="btn btn-outline-info" id="newsletter-enviar">Enviar</button>
                 </form>
             </article>
             </div>
         </section>
+
     </main>
 
     <footer>
@@ -210,6 +217,8 @@
         </div>
     </footer>
 
+    <!--Script de WOW-->
+    <script>new WOW().init();</script>
 </body>
 
 </html>
