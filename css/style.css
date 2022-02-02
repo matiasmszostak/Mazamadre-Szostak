@@ -241,6 +241,8 @@ h1 {
       width: 50%; }
     .contacto-section-ubicacion {
       text-align: center; }
+    .contacto-section-formButton {
+      margin-top: 10px; }
 
 * {
   margin: 0;
@@ -601,8 +603,6 @@ footer {
       max-height: 30vh; }
     .contacto .contacto-section-formEmail {
       width: 100%; }
-    .contacto .contacto-section .contacto-section-formButton {
-      margin-top: 10px; }
   /*FOOTER*/
   footer {
     height: 80px; }
