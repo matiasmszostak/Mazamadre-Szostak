@@ -1,0 +1,127 @@
+/*MAIN INDEX*/
+h1{
+    position: inherit;
+    font-size: 50px;
+}
+
+.index{
+    width: 100%;
+    height: 1300px;
+    /*
+    Cambio el color porque me parece que son demasiados colores y distrae.
+    background-color: rgb(253, 234, 128);
+    */
+    display: $display;
+    flex-direction: $flexDirection;
+    flex-wrap: $flex-wrap;
+    justify-content: space-evenly;
+    align-items: $align-items;
+
+
+    &-grid{
+        display: grid;
+        height: 1100px;
+        width: 95%;
+    /*    background-color: rgb(149, 238, 241); */
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 34% 44% 19%;
+        column-gap: $columnGap;
+        row-gap: $rowGap;
+        grid-template-areas: "a1 a1"
+                             "a2 a2"
+                             "a4 a5";
+        justify-content: center;
+    }
+}
+
+
+.carrousel{
+    grid-area: a1;
+    height: 394px;
+    width: 545px;
+    display: $display;
+    justify-self: center;
+    z-index: 1;
+
+    & img{
+        height: 394px;
+        width: 545px;
+    }
+}
+
+.about{
+    grid-area: a2;
+    height: 100%;
+    width: 100%;
+    display: $display;
+    flex-direction:row;
+    justify-content: center;
+    align-items: $align-items;
+
+    &-text{
+        height: 100%;
+        width: 100%;
+        display: $display;
+        flex-direction: $flexDirection;
+        justify-content: center;
+        align-items: $align-items;
+    }
+
+    &-photo{
+        height: 100%;
+        width: 100%;
+        display: $display;
+        justify-content: center;
+        align-items: $align-items;
+    
+        & img{
+            width: 100%;
+            height: auto;
+            align-self: center;
+        }
+    }
+}
+
+.aliades{
+    grid-area: a4;
+    display: $display;
+    flex-direction: $flexDirection;
+    justify-content: space-evenly;
+    align-items: $align-items;
+
+    &-links{
+        display: $display;
+        flex-direction: row;
+        flex-wrap: $flex-wrap;
+        justify-content: space-evenly;
+        align-items: $align-items;
+    
+        & img{
+            width: 13vw;
+            height: auto;
+            filter: drop-shadow(2px 2px 10px #666666);
+            
+            &:hover{
+                filter: opacity(90%);
+            }
+        }
+        &-bikon img{
+            width: 15vw;
+            height: auto;
+        }
+    }
+    
+}
+
+
+.newsletter{
+    grid-area: a5;
+    display: $display;
+    flex-direction: $flexDirection;
+    justify-content: space-evenly;
+    align-items: $align-items;
+
+    &-enviar{
+        margin-top: 10px;
+    }
+}

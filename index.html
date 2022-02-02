@@ -33,7 +33,7 @@
 <body>
 
     <header>
-        <div class="logo-contenedor animate__animated animate__fadeInRight">
+        <div class="logo animate__animated animate__fadeInRight">
             <div class="logo-img">
                 <a href="index.html">
                     <img src="img/logotipo-01.png" alt="Logo Mazamadre">
@@ -57,47 +57,27 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="html/agenda.html">Agenda</a>
+                        <a class="nav-link" href="html/agenda.html">Agenda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="html/galeria.html">Galeria</a>
+                        <a class="nav-link" href="html/galeria.html">Galeria</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="html/almacen.html">Almacén</a>
+                        <a class="nav-link" href="html/almacen.html">Almacén</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="html/contacto.html">Contacto</a>
+                        <a class="nav-link" href="html/contacto.html">Contacto</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!--
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a class="boton" href="html/agenda.html">Agenda</a>
-            </li>
-            <li>
-                <a href="html/galeria.html">Galeria</a>
-            </li>
-            <li>
-                <a href="html/almacen.html">Almacén</a>
-            </li>
-            <li>
-                <a href="html/contacto.html">Contacto</a>
-            </li>
-        </ul>
--->
-    </nav>
 
-    <main id="main-index">
+    <main class="index">
         <h1 class="animate__animated animate__fadeInRight">Mazamadre Centro Cultural</h1>
 
-        <section id="main-grid-index">
+        <section class="index-grid">
 
             <!--CARROUSEL DE FOTOS-->
             <article class="carrousel wow animate__animated animate__fadeInUp">
@@ -144,35 +124,36 @@
                 </div>
             </article>
 
-            <article id="descripcion">
+            <article class="about">
                 <!--Descripción del lugar-->
-                <h2 class="wow animate__animated animate__fadeInLeft">Sobre Maza</h2>
-                <p class="wow animate__animated animate__fadeInLeft">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-                    Officia, quia! Dolores ipsum in ea natus deserunt voluptatem! <br>
-                    Fugiat accusamus natus voluptates id reprehenderit illum deserunt <br>
-                    molestias eveniet aliquam, corrupti beatae!</p>
+                <div class="about-text">
+                    <h2 class="wow animate__animated animate__fadeInLeft">Sobre Maza</h2>
+                    <p class="wow animate__animated animate__fadeInLeft">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                        Officia, quia! Dolores ipsum in ea natus deserunt voluptatem! <br>
+                        Fugiat accusamus natus voluptates id reprehenderit illum deserunt <br>
+                        molestias eveniet aliquam, corrupti beatae!</p>
+                </div>
+                <div class="about-photo wow animate__animated animate__fadeInRight">
+                    <img src="img/ejemplo-home.jpg" alt="Espectadores presencian un show">
+                </div>
             </article>
-            <div id="foto-descripcion" class="wow animate__animated animate__fadeInRight">
-                <img src="img/ejemplo-home.jpg" alt="Espectadores presencian un show">
-            </div>
+            <article class="aliades wow animate__animated animate__fadeInRight">
 
-            <article class="aliadxs wow animate__animated animate__fadeInRight">
+                <h2 class="aliades-heading">Aliades</h2>
 
-                <h2 id="aliadxs-h">Aliades</h2>
-
-                <div class="aliados-links">
-                    <div id="logo-bikon">
+                <div class="aliades-links">
+                    <div class="aliades-links-bikon">
                         <a href="https://bikonsulting.com/">
                             <img src="img/biko01.png" alt="Bikonsulting Logo">
                         </a>
                     </div>
-                    <div id="logo-utt">
+                    <div class="aliades-links-utt">
                         <a href="https://uniondetrabajadoresdelatierra.com.ar/">
                             <img src="img/utt01.png" alt="UTT Logo">
                         </a>
                     </div>
-                    <div id="logo-nucleo">
+                    <div class="aliades-links-nucleo">
                         <a href="https://elnucleo-ne.org/">
                             <img src="img/nucleo01.png" alt="El Nucleo Logo">
                         </a>
@@ -181,8 +162,8 @@
             </article>
 
             <article class="newsletter wow animate__animated animate__fadeInRight">
-                <h2 id="newsletter-h2">Sumate a nuestro newsletter</h2>
-                <form action="#">
+                <h2 class="newsletter-heading">Sumate a nuestro newsletter</h2>
+                <form class="newsletter-form" action="#">
                     <div id="form-nombre-apellido">
                         <input type="text" placeholder="Nombre">
                         <input type="text" placeholder="Apellido">
@@ -191,7 +172,7 @@
                         <input type="email" placeholder="nombre@email.com">
                         <input type="text" placeholder="Celular (opcional)">
                     </div>
-                    <button type="button" class="btn btn-outline-info" id="newsletter-enviar">Enviar</button>
+                    <button type="button" class="newsletter-enviar btn btn-outline-info">Enviar</button>
                 </form>
             </article>
             </div>
@@ -219,6 +200,7 @@
 
     <!--Script de WOW-->
     <script>new WOW().init();</script>
+    
 </body>
 
 </html>

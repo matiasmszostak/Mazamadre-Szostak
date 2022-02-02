@@ -13,7 +13,7 @@
         crossorigin="anonymous"></script>
     <!--WOW-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script src="js/wow.min.js"></script>
+    <script src="../js/wow.min.js"></script>
 
     <link rel="icon" href="../img/logotipo-01.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,9 +69,9 @@
         </div>
     </nav>
 
-    <main id="main-contacto">
+    <main class="contacto">
 
-        <section id="section-contacto">
+        <section class="contacto-section">
             <h1 class="animate__animated animate__fadeInRight">CONTACTO</h1>
 
             <!--            <div id="contenedor-form">
@@ -86,21 +86,20 @@
 
             <div class="mb-3 wow animate__animated animate__fadeInUp">
                 <form action="#">
-                    <label for="exampleFormControlInput1" class="form-label" id="contacto-email">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                    <label for="exampleFormControlInput1" class="contacto-section-formEmail form-label">Email address</label>
+                    <input type="email" class="contacto-section-formEmail form-control" id="exampleFormControlInput1"
                         placeholder="nombre@email.com">
-                        <br>
-                <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
-                    placeholder="Dejanos tu mensaje"></textarea>
-                <button type="button" class="btn btn-outline-info" id="newsletter-enviar">Enviar</button>
+                    <br>
+                    <label for="exampleFormControlTextarea1" class="contacto-section-formTextarea form-label">Mensaje</label>
+                    <textarea class="contacto-section-formTextarea form-control" id="exampleFormControlTextarea1" rows="5"
+                        placeholder="Dejanos tu mensaje"></textarea>
+                    <button type="button" class="contacto-section-formButton btn btn-outline-info" id="newsletter-enviar">Enviar</button>
                 </form>
             </div>
 
-            <div id="div-ubicacion" class="wow animate__animated animate__fadeInUp">
+            <div class="contacto-section-ubicacion wow animate__animated animate__fadeInUp">
                 <h2>Vení a visitarnos</h2>
-                <p>Estamos en Maza 1284, CABA. Dentro del barrio de Boedo, entre las calles Constitución y Tarija.
-                </p>
+                <p>Estamos en Maza 1284, CABA. Dentro del barrio de Boedo, entre las calles Constitución y Tarija.</p>
             </div>
         </section>
 
@@ -123,6 +122,8 @@
             </a>
         </div>
     </footer>
+    <!--Script de WOW-->
+    <script>new WOW().init();</script>
 
 </body>
 
