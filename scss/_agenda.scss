@@ -1,11 +1,6 @@
 /*MAIN Agenda*/
 .agenda{
-    width: 100%;
-    height: 700px;
-    /*
-    Cambio el color porque me parece que son demasiados colores y distrae.
-    background-color: rgb(253, 234, 128);
-    */
+    @include sizes(100%, 700px);
     display: $display;
     flex-direction: $flexDirection;
     flex-wrap: $flex-wrap;

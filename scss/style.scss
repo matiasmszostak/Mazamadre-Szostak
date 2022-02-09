@@ -1,4 +1,9 @@
 /*Glboales*/
+@mixin sizes($width, $height){
+    width: $width;
+    height: $height;
+}
+
 @import 'variables';
 @import 'animaciones';
 @import 'index';
@@ -54,12 +59,6 @@ textarea{
 ul{
     list-style: none;
 }
-
-@mixin sizes($width, $height){
-    width: $width;
-    height: $height;
-}
-
 
 /*HEADER*/
 header{

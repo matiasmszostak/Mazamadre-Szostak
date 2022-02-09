@@ -1,15 +1,13 @@
 /*MAIN Contacto*/
 .contacto{
-    width: 100%;
-    height: 650px;
+    @include sizes(100%, 650px);
     display: $display;
     flex-direction: $flexDirection;
     align-items: $align-items;
     justify-content: space-evenly;
 
     &-section{
-        height: 100%;
-        width: 90%;
+        @include sizes(90%, 100%);
         display: $display;
         flex-direction: $flexDirection;
         flex-wrap: $flex-wrap;
