@@ -201,7 +201,8 @@ h1 {
       text-align: justify;
       justify-content: center; }
     .almacen-section-instagram img {
-      height: 75px; }
+      height: 70px;
+      margin-bottom: 20px; }
       .almacen-section-instagram img:hover {
         filter: opacity(80%); }
 
@@ -567,6 +568,9 @@ footer {
         width: 100%;
         justify-self: center;
         margin: 0; }
+    .almacen-section-heading {
+      font-size: 25px;
+      text-align: center; }
     .almacen-section-instagram img {
       bottom: 20px;
       margin-bottom: 25px;
