@@ -255,14 +255,17 @@ body {
 main {
   background-image: url(../img/main-background.png); }
 
+h1 {
+  font-size: 60px; }
+
 h2 {
   font-size: 35px; }
 
 h3 {
-  font-size: 30px; }
+  font-size: 40px; }
 
 h4 {
-  font-size: 20px; }
+  font-size: 30px; }
 
 h5 {
   font-size: 15px; }
@@ -284,8 +287,8 @@ ul {
 
 /*HEADER*/
 header {
-  height: 20vh;
   width: 100%;
+  height: 20vh;
   /*    background-color: rgb(175 255 226); */
   background: linear-gradient(135deg, white, #4bc3c6);
   color: #4e2070;
@@ -306,8 +309,8 @@ header {
 .logo-img {
   height: 21vh; }
   .logo-img img {
-    height: 100%;
     width: auto;
+    height: 100%;
     /*border-style: solid;
         border-width: 3px;
         border-color: rgb(63 0 255);
@@ -320,8 +323,8 @@ nav {
   position: sticky;
   top: 0;
   background-color: #4bc3c6;
-  height: 55px;
   width: 100%;
+  height: 55px;
   z-index: 2; }
   nav ul {
     width: 100%;
@@ -360,7 +363,7 @@ footer {
   flex-wrap: wrap;
   margin-left: 10px; }
 
-#footer-title {
+#footer-title, #footer-direccion {
   color: white;
   font-size: 22px;
   text-shadow: 3px 3px 5px #000;
@@ -368,15 +371,11 @@ footer {
   margin: 0; }
 
 #footer-direccion {
-  color: white;
-  font-size: 19px;
-  text-shadow: 3px 3px 5px #000;
-  flex-wrap: wrap;
-  margin: 0; }
+  font-size: 19px; }
 
 .favicons {
-  height: 100%;
   width: auto;
+  height: 100%;
   position: sticky;
   display: flex;
   flex-wrap: nowrap;
@@ -384,34 +383,29 @@ footer {
   align-items: center;
   bottom: 31px;
   margin-right: 20px; }
+  .favicons #facebook-img, .favicons #instagram-img, .favicons #whatsapp-img {
+    margin: 10px;
+    bottom: 30px;
+    width: auto;
+    height: 50px; }
+  .favicons #instagram-img {
+    width: auto;
+    height: 50px; }
+  .favicons #whatsapp-img {
+    width: auto;
+    height: 50px; }
+  .favicons img:hover {
+    filter: opacity(80%); }
 
-.favicons img:hover {
-  filter: opacity(80%); }
-
-#facebook-img {
-  height: 50px;
-  width: auto;
-  margin: 10px;
-  bottom: 30px; }
-
-#instagram-img {
-  height: 50px;
-  width: auto;
-  margin: 10px;
-  bottom: 30px; }
-
-#whatsapp-img {
-  height: 50px;
-  width: auto;
-  margin: 10px;
-  bottom: 30px; }
-
+/*----------------------------------------------------------------------------------------------------------*/
 /*MEDIA QUERY TABLET 768px*/
 @media only screen and (max-width: 768px) {
   h1 {
     font-size: 40px;
     text-align: center; }
   h2 {
+    font-size: 32px; }
+  h3 {
     font-size: 32px; }
   /*HEADER*/
   header {
@@ -478,7 +472,7 @@ footer {
     .contacto-section .contacto-section-formEmail {
       width: 75%; }
   /*FOOTER*/
-  footer #footer-title {
+  footer #footer-title, footer #footer-direccion {
     /*
             left: 2%;
             top: 20px;
@@ -489,6 +483,7 @@ footer {
   footer .favicons {
     margin-right: 0; } }
 
+/*----------------------------------------------------------------------------------------------------------*/
 /*MEDIA QUERY MOBILE 320px*/
 @media only screen and (max-width: 320px) {
   h1 {
@@ -497,6 +492,8 @@ footer {
     margin-top: 30px;
     margin-bottom: 10px; }
   h2 {
+    font-size: 25px; }
+  h3 {
     font-size: 25px; }
   /*HEADER*/
   header {
@@ -527,20 +524,21 @@ footer {
       margin: 30px; }
       .index-grid .carrousel {
         grid-area: a1;
-        height: auto;
         width: 100%;
+        height: auto;
         display: flex;
         justify-self: center; }
         .index-grid .carrousel img {
-          height: auto;
-          width: 100%; }
+          width: 100%;
+          height: auto; }
       .index-grid .about {
         flex-direction: column; }
       .index-grid .aliades {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        margin-bottom: 10px; }
         .index-grid .aliades-links {
           display: flex;
           flex-direction: column-reverse;
@@ -554,22 +552,13 @@ footer {
               filter: opacity(90%); }
           .index-grid .aliades-links-bikon img {
             width: 60vw; }
-      .index-grid .newsletter {
-        grid-area: a5;
+      .index-grid .newsletter-320-extend, .index-grid .newsletter, .index-grid .newsletter-form, .index-grid .newsletter-form div {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center; }
-        .index-grid .newsletter-form {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center; }
-          .index-grid .newsletter-form div {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center; }
+      .index-grid .newsletter {
+        grid-area: a5; }
   /*MAIN Agenda*/
   .agenda {
     height: 900px; }
@@ -606,21 +595,19 @@ footer {
   /*FOOTER*/
   footer {
     height: 80px; }
-    footer #footer-title {
-      /*
-            left: 2%;
-            top: 20px;
-            */
+    footer #footer-title, footer #footer-direccion {
       font-size: 18px; }
     footer #footer-direccion {
-      /*
-            left: 2%;
-            top: 30px;
-            */
       font-size: 16px; }
-    footer .favicons #facebook-img {
+    footer .favicons #facebook-img, footer .favicons #instagram-img, footer .favicons #whatsapp-img {
+      margin: 5px;
+      width: auto;
       height: 40px; }
     footer .favicons #instagram-img {
+      margin: 5px;
+      width: auto;
       height: 40px; }
     footer .favicons #whatsapp-img {
+      margin: 5px;
+      width: auto;
       height: 40px; } }

@@ -1,5 +1,5 @@
 /*Glboales*/
-@import 'variables.scss';
+@import 'variables';
 @import 'animaciones';
 @import 'index';
 @import 'agenda';
@@ -22,15 +22,19 @@ main{
     background-image: url(../img/main-background.png);
 }
 
+h1{
+    font-size: 60px;
+}
+
 h2{
     font-size: 35px;
 }
 
 h3{
-    font-size: 30px;
+    font-size: 40px;
 }
 h4{
-    font-size: 20px;
+    font-size: 30px;
 }
 h5{
     font-size: 15px;
@@ -51,10 +55,15 @@ ul{
     list-style: none;
 }
 
+@mixin sizes($width, $height){
+    width: $width;
+    height: $height;
+}
+
+
 /*HEADER*/
 header{
-    height: 20vh;
-    width: 100%;
+    @include sizes(100%, 20vh);
 /*    background-color: rgb(175 255 226); */
     background: linear-gradient(135deg, white, $myCyan);
     color: rgb(78, 32, 112);
@@ -78,8 +87,7 @@ header{
     height: 21vh;
 
     & img{
-        height: 100%;
-        width: auto;
+        @include sizes(auto, 100%);
         /*border-style: solid;
         border-width: 3px;
         border-color: rgb(63 0 255);
@@ -97,13 +105,11 @@ nav{
     position: sticky;
     top: 0;
     background-color:  $myCyan;
-    height: 55px;
-    width: 100%;
+    @include sizes(100%, 55px);
     z-index: 2;
 
     ul{
-        width: 100%;
-        height: 100%;
+        @include sizes(100%, 100%);
         display: $display;
         flex-direction: row;
         flex-wrap: $flex-wrap;
@@ -129,8 +135,7 @@ nav{
 /*FOOTER*/
 
 footer{
-    width: 100%;
-    height: 80px;
+    @include sizes(100%, 80px);
     background-color: rgb(102, 40, 147);
     background-image: url(../img/redes01.png);
     background-position-y: 20%;
@@ -143,8 +148,7 @@ footer{
     flex-direction: $flexDirection;
     justify-content: center;
     align-items: flex-start;
-    width: 50%;
-    height: 100%;
+    @include sizes(50%, 100%);
     flex-wrap: wrap;
     margin-left: 10px;
 }
@@ -157,16 +161,12 @@ footer{
     margin: 0;
 }
 #footer-direccion{
-    color: white;
+    @extend #footer-title;
     font-size: 19px;
-    text-shadow: 3px 3px 5px #000;
-    flex-wrap: wrap;
-    margin: 0;
 }
 
 .favicons{
-    height: 100%;
-    width: auto;
+    @include sizes(auto, 100%);
     position: sticky;
     display: $display;
     flex-wrap: $flex-wrap;
@@ -174,41 +174,30 @@ footer{
     align-items: $align-items;
     bottom: 31px;
     margin-right: 20px;
-}
 
-.favicons img:hover{
-    filter: opacity(80%);
-}
+    #facebook-img{
+        margin: 10px;
+        bottom: 30px;
+        @include sizes(auto, 50px);
+    }
+    
+    #instagram-img{
+        @extend #facebook-img;
+        @include sizes(auto, 50px);
+    }
+    
+    #whatsapp-img{
+        @extend #facebook-img;
+        @include sizes(auto, 50px);
+    }
 
-#facebook-img{
-    height: 50px;
-    width: auto;
-    margin: 10px;
-    bottom: 30px;
-}
-
-#instagram-img{
-    height: 50px;
-    width: auto;
-    margin: 10px;
-    bottom: 30px;
-}
-
-#whatsapp-img{
-    height: 50px;
-    width: auto;
-    margin: 10px;
-    bottom: 30px;
+    & img:hover{
+        filter: opacity(80%);
+    }
 }
 
 
-  
-
-
-
-
-
-
+/*----------------------------------------------------------------------------------------------------------*/
 
 
 /*MEDIA QUERY TABLET 768px*/
@@ -221,6 +210,9 @@ footer{
 
     h2{
        font-size: 32px; 
+    }
+    h3{
+        font-size: 32px;
     }
 
     /*HEADER*/
@@ -357,6 +349,9 @@ footer{
 }
 
 
+/*----------------------------------------------------------------------------------------------------------*/
+
+
 /*MEDIA QUERY MOBILE 320px*/
 @media only screen and (max-width:320px){
     
@@ -367,6 +362,9 @@ footer{
         margin-bottom: 10px;
     }
     h2{
+        font-size: 25px;
+    }
+    h3{
         font-size: 25px;
     }
     
@@ -410,14 +408,12 @@ footer{
 
             .carrousel{
                 grid-area: a1;
-                height: auto;
-                width: 100%;
+                @include sizes(100%, auto);
                 display: $display;
                 justify-self: center;
         
                 & img{
-                    height: auto;
-                    width: 100%;
+                    @include sizes(100%, auto);
                 }
             }
         
@@ -430,6 +426,7 @@ footer{
                 flex-direction: $flexDirection;
                 justify-content: center;
                 align-items: $align-items;
+                margin-bottom: 10px;
         
                 &-links{
                     display: $display;
@@ -455,26 +452,23 @@ footer{
         
         
             }
-        
-        
-            .newsletter{
-                grid-area: a5;
+            
+            .newsletter-320-extend{
                 display: $display;
                 flex-direction: $flexDirection;
                 justify-content: space-evenly;
                 align-items: $align-items;
+            }
+        
+            .newsletter{
+                grid-area: a5;
+                @extend .newsletter-320-extend;
         
                 &-form{
-                    display: $display;
-                    flex-direction: $flexDirection;
-                    justify-content: space-evenly;
-                    align-items: $align-items;
+                    @extend .newsletter-320-extend;
         
                     & div{
-                        display: $display;
-                        flex-direction: $flexDirection;
-                        justify-content: space-evenly;
-                        align-items: $align-items;
+                        @extend .newsletter-320-extend;
                     }
                 }
             }
@@ -561,36 +555,29 @@ footer{
         height: 80px;
 
         #footer-title{
-            /*
-            left: 2%;
-            top: 20px;
-            */
             font-size: 18px;
         }
         #footer-direccion{
-            /*
-            left: 2%;
-            top: 30px;
-            */
             font-size: 16px;
         }
 
         .favicons{
 
             #facebook-img{
-                height: 40px;
+                margin: 5px;
+                @include sizes(auto, 40px);  
             }
         
             #instagram-img{
-                height: 40px;
+                margin: 5px;
+                @include sizes(auto, 40px);  
             }
         
             #whatsapp-img{
-                height: 40px;
+                margin: 5px;
+                @include sizes(auto, 40px);  
             }
         }
     
     }
-
-
 }
