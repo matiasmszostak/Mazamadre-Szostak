@@ -54,6 +54,12 @@ h1{
         flex-direction: $flexDirection;
         justify-content: center;
         align-items: $align-items;
+
+        &-parrafo{
+            width: 85%;
+            font-size: 18px;
+            text-align: justify;
+        }
     }
 
     &-photo{

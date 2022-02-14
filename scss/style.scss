@@ -48,6 +48,7 @@ h6{
     font-size: 10px;
 }
 p{
+    font-size: 16px;
     font-family: 'Archivo Narrow', sans-serif;
 }
 input{
@@ -63,7 +64,6 @@ ul{
 /*HEADER*/
 header{
     @include sizes(100%, 20vh);
-/*    background-color: rgb(175 255 226); */
     background: linear-gradient(135deg, white, $myCyan);
     color: rgb(78, 32, 112);
     position: relative;
@@ -87,10 +87,6 @@ header{
 
     & img{
         @include sizes(auto, 100%);
-        /*border-style: solid;
-        border-width: 3px;
-        border-color: rgb(63 0 255);
-        border-radius: 20%;*/
     }
     
     &:hover{
@@ -247,8 +243,12 @@ footer{
         flex-direction: $flexDirection;
 
         &-grid{
-            height: 950px;
+            @include sizes(103%, 950px);
             grid-template-rows: 36% 44% 15%;
+
+            .about-text-parrafo{
+                font-size: 16px;
+            }
 
             .aliades-links{
                 flex-direction: column-reverse;
@@ -281,6 +281,7 @@ footer{
 
             &-grid{
                 height: 1200px;
+                margin-left: 20px;
                 grid-template-columns: 50% 50%;
                 grid-template-rows: repeat(4, 1fr);
                 grid-template-areas: "a1 a2"
@@ -330,10 +331,6 @@ footer{
         /*FOOTER*/
 footer{
         #footer-title{
-            /*
-            left: 2%;
-            top: 20px;
-            */
             font-size: 20px;
         }
         #footer-direccion{
@@ -400,7 +397,7 @@ footer{
         &-grid{
             display: $display;
             flex-direction: $flexDirection;
-            height: 1200px;
+            @include sizes(95%, 1200px);
             align-items:center;
             justify-content: space-between;
             margin: 30px;
@@ -418,6 +415,10 @@ footer{
         
             .about{
                 flex-direction: $flexDirection;
+
+                &-text-parrafo{
+                    font-size: 16px;
+                }
             }
         
             .aliades{
@@ -489,6 +490,7 @@ footer{
 
             &-grid{
                 height: 2350px;
+                margin-left: 0px;
                 grid-template-columns: 100%;
                 grid-template-rows: repeat(9, 1fr);
                 grid-template-areas:"a1"
@@ -512,6 +514,13 @@ footer{
         height: 600px;
 
         &-section{
+
+            &-parrafo{
+                width: 95%;
+                text-align: justify;
+                justify-content: center;
+                font-size: 15px;
+                }
 
             &-formLink{
                 width: 99vw;
