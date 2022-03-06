@@ -1,28 +1,81 @@
 /*MAIN Contacto*/
+
 .contacto{
-    @include sizes(100%, 650px);
+    @include sizes(100%, 700px);
     display: $display;
     flex-direction: $flexDirection;
     align-items: $align-items;
     justify-content: space-evenly;
 
+
     &-section{
-        @include sizes(90%, 100%);
+        @include sizes(90%, 500px);
         display: $display;
-        flex-direction: $flexDirection;
+        flex-direction: row-reverse;
         flex-wrap: $flex-wrap;
         justify-content: space-evenly;
-        align-items: $align-items;
+        align-items: flex-start;
 
-        &-formTextarea{
-            width: 75vw;
-            max-height: 25vh;
+        &-formulario{
+            display: $display;
+            flex-direction: row;
+            justify-content: center;
+            align-content:space-between;
+            margin-top: 50px;
+
+            &-email{
+                width:45vw;
+            }
+
+            &-textarea{
+                width: 45vw;
+                max-height: 25vh;
+            }
         }
-        &-formEmail{
-            width: 50%;
-        }
+
         &-ubicacion{
             text-align: center;
+            @include sizes(50%, 480px);
+            background-color: white;
+            border-radius: 30px;
+            box-shadow: 2px 2px 10px rgb(170, 170, 170);
+            display: $display;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: $align-items;
+            margin-right: 15px;
+
+            &-p{
+                display: $display;
+                @include sizes(50%, 100%);
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                #location-img{
+                    position: relative;
+                    top: -9px;
+                    padding-right: 8px;
+                    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+                }
+
+                p{
+                    font-family: 'Bebas Neue', impact, sans serif;
+                    font-size: 20px;
+                }
+            }
+
+            &-maps{
+                @include sizes(40vw, 425px);
+                display: $display;
+                flex-direction: $flexDirection;
+                align-items: $align-items;
+                justify-content: flex-start;
+
+                & iframe{
+                    border-radius: 30px;
+                    }
+            }
         }
         &-formButton{
             margin-top: 10px;

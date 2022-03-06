@@ -38,7 +38,7 @@
     <header>
         <div class="logo-contenedor animate__animated animate__fadeInRight">
             <div class="logo-img">
-                <a href="index.html">
+                <a href="../index.html">
                     <img src="../img/logotipo-01.png" alt="Logo Mazamadre">
                 </a>
             </div>
@@ -78,25 +78,29 @@
 
     <main class="contacto">
 
-        <section class="contacto-section">
-            <h1 class="animate__animated animate__fadeInRight">CONTACTO</h1>
+        <h1 class="animate__animated animate__fadeInRight">CONTACTO</h1>
 
-            <div class="mb-3 wow animate__animated animate__fadeInUp">
+        <section class="contacto-section">
+
+            <div class="contacto-section-formulario mb-3 wow animate__animated animate__fadeInUp">
                 <form action="#">
-                    <label for="exampleFormControlInput1" class="contacto-section-formEmail form-label">Email address</label>
-                    <input type="email" class="contacto-section-formEmail form-control" id="exampleFormControlInput1"
+                    <label for="exampleFormControlInput1" class="contacto-section-formEmail form-label">Email</label>
+                    <input type="email" class="contacto-section-formulario-email form-control" id="exampleFormControlInput1"
                         placeholder="nombre@email.com">
                     <br>
                     <label for="exampleFormControlTextarea1" class="contacto-section-formTextarea form-label">Mensaje</label>
-                    <textarea class="contacto-section-formTextarea form-control" id="exampleFormControlTextarea1" rows="5"
+                    <textarea class="contacto-section-formulario-textarea form-control" id="exampleFormControlTextarea1" rows="5"
                         placeholder="Dejanos tu mensaje"></textarea>
                     <button type="button" class="contacto-section-formButton btn btn-outline-info" id="newsletter-enviar">Enviar</button>
                 </form>
             </div>
 
             <div class="contacto-section-ubicacion wow animate__animated animate__fadeInUp">
-                <h3>Vení a visitarnos</h3>
-                <p>Estamos en Maza 1284, CABA. Dentro del barrio de Boedo, entre las calles Constitución y Tarija.</p>
+                <div class="contacto-section-ubicacion-maps" style="width: 100%"><iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Maza%201284,%20C1240%20CABA+(Mazamadre)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"> <a href="https://www.gps.ie/car-satnav-gps/">Car GPS</a></iframe></div>
+                    <div class="contacto-section-ubicacion-p">
+                        <img id="location-img" src="../img/location.svg" alt="Icono de ubicación">
+                        <p>Maza 1284, CABA</p>
+                    </div>
             </div>
         </section>
 

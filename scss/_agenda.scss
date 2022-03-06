@@ -1,20 +1,27 @@
 /*MAIN Agenda*/
 .agenda{
-    @include sizes(100%, 700px);
+    @include sizes(100%, 1900px);
     display: $display;
     flex-direction: $flexDirection;
     flex-wrap: $flex-wrap;
     justify-content: space-evenly;
     align-items: $align-items;
-}
 
-.agenda-table{
-    width: 93%;
+    &-cards{
+        @include sizes(75%, 1700px);
+        display: $display;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
 
-    & tr td {
-        border:1px solid  rgba(27, 20, 32, 0.7);
-        padding: 15px;
-        background-color: #acdfe3;
-        background: linear-gradient(135deg, white, #a2e0e2);
+        & .card{
+            width: 18rem;
+        }
+
+        & h5{
+            font-size: 18px;
+        }
     }
+
 }

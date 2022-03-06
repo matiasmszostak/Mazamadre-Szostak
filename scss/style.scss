@@ -22,6 +22,14 @@ body{
     overflow-x: hidden;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+
+    &:hover{
+        color: black;
+    }
+}
 
 main{
     background-image: url(../img/main-background.png);
@@ -84,6 +92,7 @@ header{
 }
 .logo-img{
     height: 21vh;
+    filter: drop-shadow(0px 5px 6px white);
 
     & img{
         @include sizes(auto, 100%);
@@ -195,8 +204,8 @@ footer{
 /*----------------------------------------------------------------------------------------------------------*/
 
 
-/*MEDIA QUERY TABLET 768px*/
-@media only screen and (max-width:768px){
+/*MEDIA QUERY TABLET 1023px*/
+@media only screen and (max-width:1023px){
     
     h1{
         font-size: 40px;
@@ -210,7 +219,7 @@ footer{
         font-size: 32px;
     }
 
-    /*HEADER*/
+    /*HEADER 1023px*/
     header{
         height: 22vh;
 
@@ -225,7 +234,7 @@ footer{
     }
 
 
-    /*NAV*/
+    /*NAV 1023px*/
     nav{
         height: 55px;
 
@@ -236,7 +245,7 @@ footer{
     }
 
 
-    /*MAIN INDEX*/
+    /*MAIN INDEX 1023px*/
     .index{
         height: 1150px;
         display: $display;
@@ -269,18 +278,26 @@ footer{
         }
     }
 
-        /*MAIN Agenda*/
+        /*MAIN Agenda 1023px*/
         .agenda{
-            height: 700px;
+            height: 2000px;
+
+            &-header{
+                margin: 35px;
+            }
+
+            &-cards{
+                @include sizes(95%, 1900px);
+            }
         }
 
-        /*MAIN Galeria*/
+        /*MAIN Galeria 1023px*/
 
         .galeria{
-            height: 1400px;
+            height: 1900px;
 
             &-grid{
-                height: 1200px;
+                height: 1700px;
                 margin-left: 20px;
                 grid-template-columns: 50% 50%;
                 grid-template-rows: repeat(4, 1fr);
@@ -288,11 +305,15 @@ footer{
                                      "a5 a8"
                                      "a3 a7"
                                      "a6 a7";
+                
+                & #foto07{
+                    margin-top: 0;
+                }
             }
         }
 
 
-    /*MAIN Almacen*/
+    /*MAIN Almacen 1023px*/
 
     .almacen{
         height: 700px;
@@ -317,21 +338,13 @@ footer{
     }
 
 
-        /*MAIN Contacto*/
+        /*MAIN Contacto 1023px*/
     .contacto{
         height: 700px;
+        flex-direction: column;
 
-        &-section{
-            .contacto-section-formTextarea{
-                width: 90vw;
-                max-height: 30vh;
-            }
-            .contacto-section-formEmail{
-                width: 75%;
-            }
-        }
     }
-        /*FOOTER*/
+        /*FOOTER 1023px*/
 footer{
         #footer-title{
             font-size: 20px;
@@ -348,11 +361,204 @@ footer{
 }
 
 
+
+
 /*----------------------------------------------------------------------------------------------------------*/
 
 
-/*MEDIA QUERY MOBILE 320px*/
-@media only screen and (max-width:320px){
+/*MEDIA QUERY TABLET 768px*/
+@media only screen and (max-width:768px){
+    
+    h1{
+        font-size: 40px;
+        text-align: center;
+    }
+
+    h2{
+       font-size: 32px; 
+    }
+    h3{
+        font-size: 32px;
+    }
+
+    /*HEADER 768px*/
+    header{
+        height: 22vh;
+
+        .logo-img{
+            height: 18vh;
+            margin-top: 8px;
+            margin-left: -13px;
+        }
+        .subtitulo{
+            font-size: 25px;
+        }
+    }
+
+
+    /*NAV 768px*/
+    nav{
+        height: 55px;
+
+        ul li a{
+            font-size: 20px;
+            letter-spacing: 0.004em;
+        }
+    }
+
+
+    /*MAIN INDEX 768px*/
+    .index{
+        height: 1150px;
+        display: $display;
+        flex-direction: $flexDirection;
+
+        &-grid{
+            @include sizes(103%, 950px);
+            grid-template-rows: 36% 44% 15%;
+
+            .about-text-parrafo{
+                font-size: 16px;
+            }
+
+            .aliades-links{
+                flex-direction: column-reverse;
+                flex-wrap: wrap;
+
+                & img{
+                    width: 20vw;
+                    padding: 5px;
+                }
+                &-bikon img{
+                    width: 25vw;
+                }
+            }
+            .newsletter-heading{
+                align-self: center;
+                justify-self: center;
+            }
+        }
+    }
+
+        /*MAIN Agenda 768px*/
+        .agenda{
+            height: 2900px;
+
+            &-header{
+                margin: 35px;
+            }
+
+            &-cards{
+                @include sizes(95%, 2800px);
+            }
+        }
+
+        /*MAIN Galeria 768px*/
+
+        .galeria{
+            height: 1400px;
+
+            &-grid{
+                height: 1200px;
+                
+                & #foto07{
+                    margin-top: 0;
+                }
+            }
+        }
+
+
+    /*MAIN Almacen 768px*/
+
+    .almacen{
+        height: 700px;
+
+        &-section{
+            &-instagram img{
+                height: 60px;
+            }
+        
+            &-formLink{
+                width: 90vw;
+                & img{
+                    width: 100%;
+                    justify-self: center;
+                    margin: 0;
+                }
+            }
+            &-parrafo{
+                text-align: center;
+            }
+        }
+    }
+
+
+        /*MAIN Contacto 768px*/
+    .contacto{
+        height: 700px;
+
+    }
+        /*FOOTER 768px*/
+footer{
+        #footer-title{
+            font-size: 20px;
+        }
+        #footer-direccion{
+            font-size: 18px;
+        }
+
+        .favicons{
+            margin-right: 0;
+        }
+
+    }
+}
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------*/
+
+/*MEDIA QUERY MOBILE 600px*/
+@media only screen and (max-width:600px){
+
+        /*MAIN Agenda 440px*/
+        .agenda{
+            height: 5500px;
+
+            &-cards{
+                @include sizes(95%, 5400px);
+
+                & .card{
+                    width: 26rem;
+                }
+            }
+        }
+
+               /*MAIN Galeria 440px*/
+
+               .galeria{
+                height: 1200px;
+    
+                &-grid{
+                    height: 1000px;
+
+                    & #foto07{
+                        margin-top: 0;
+                    }
+                }
+            }
+    
+
+
+
+}
+
+
+
+
+/*MEDIA QUERY MOBILE 440px*/
+@media only screen and (max-width:440px){
     
     h1{
         font-size: 40px;
@@ -361,27 +567,28 @@ footer{
         margin-bottom: 10px;
     }
     h2{
-        font-size: 25px;
+        font-size: 35px;
     }
     h3{
-        font-size: 25px;
+        font-size: 30px;
     }
     
-    /*HEADER*/
+    /*HEADER 440px*/
     header{
         height: 25vh;
 
         .logo-img{
-            height: 18vh;
-            margin-top: 8px;
-            margin-left: -13px;
+            height: 19vh;
+            margin-top: 4px;
+            margin-left: -6px;
         }
         .subtitulo{
-            font-size: 20px;
+            font-size: 24px;
+            right: 10px;
         }
     }
 
-    /*NAV*/
+    /*NAV 440px*/
     nav{
         height: 60px;
 
@@ -391,16 +598,20 @@ footer{
         }
     }
 
-    /*MAIN INDEX*/
+    /*MAIN INDEX 440px*/
     .index{
-        height: 1300px;
+        height: 1400px;
         display: $display;
         flex-direction: $flexDirection;
+
+        & h1{
+            margin-top: 50px;
+        }
 
         &-grid{
             display: $display;
             flex-direction: $flexDirection;
-            @include sizes(95%, 1200px);
+            @include sizes(95%, 1300px);
             align-items:center;
             justify-content: space-between;
             margin: 30px;
@@ -431,6 +642,12 @@ footer{
                 align-items: $align-items;
                 margin-bottom: 10px;
         
+                & h3{
+                    margin-top: 16px;
+                    margin-bottom: -9px;
+                    margin-left: 22px;
+                }
+
                 &-links{
                     display: $display;
                     flex-direction: column-reverse;
@@ -456,7 +673,7 @@ footer{
         
             }
             
-            .newsletter-320-extend{
+            .newsletter-440-extend{
                 display: $display;
                 flex-direction: $flexDirection;
                 justify-content: space-evenly;
@@ -465,13 +682,13 @@ footer{
         
             .newsletter{
                 grid-area: a5;
-                @extend .newsletter-320-extend;
+                @extend .newsletter-440-extend;
         
                 &-form{
-                    @extend .newsletter-320-extend;
+                    @extend .newsletter-440-extend;
         
                     & div{
-                        @extend .newsletter-320-extend;
+                        @extend .newsletter-440-extend;
                     }
                 }
             }
@@ -481,18 +698,26 @@ footer{
 
 
 
-        /*MAIN Agenda*/
+        /*MAIN Agenda 440px*/
         .agenda{
-            height: 900px;
+            height: 5200px;
+
+            &-cards{
+                @include sizes(95%, 5050px);
+
+                & .card{
+                    width: 24rem;
+                }
+            }
         }
 
-        /*MAIN Galeria*/
+        /*MAIN Galeria 440px*/
 
         .galeria{
-            height: 2475px;
+            height: 3300px;
 
             &-grid{
-                height: 2350px;
+                height: 3100px;
                 margin-left: 0px;
                 grid-template-columns: 100%;
                 grid-template-rows: repeat(9, 1fr);
@@ -507,11 +732,15 @@ footer{
                                     "a8";
                 justify-content: center;
             }
+
+            & #foto07{
+                margin-top: 0;
+            }
         }
 
 
 
-    /*MAIN Almacen*/
+    /*MAIN Almacen 440px*/
 
     .almacen{
         height: 600px;
@@ -547,25 +776,273 @@ footer{
         }
     }
 
-        /*MAIN Contacto*/
+        /*MAIN Contacto 440px*/
     .contacto{
-        height: 600px;
+        height: 1000px;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
 
-        .contacto-section{
+        &-section{
+            @include sizes(95%, 900px);
+            flex-direction: column;
+            flex-wrap: nowrap;
 
-            &-formTextarea{
-                width: 90vw;
-                max-height: 30vh;
+            &-formulario{
+                margin-top: -50px;
+
+                &-textarea{
+                    width: 95vw;
+                    max-height: 30vh;
+                }
+                &-email{
+                    width: 95%;
+                }
             }
-            &-formEmail{
-                width: 100%;
+
+            &-ubicacion{
+                @include sizes(95%, 480px);
+                margin-left: 7px;
+            }
+        }
+    }
+    
+
+
+        /*FOOTER 440px*/
+
+    footer{
+        height: 80px;
+
+        #footer-title{
+            font-size: 20px;
+        }
+        #footer-direccion{
+            font-size: 18px;
+        }
+
+        .favicons{
+
+            #facebook-img{
+                margin: 5px;
+                @include sizes(auto, 45px); 
+            }
+        
+            #instagram-img{
+                margin: 5px;
+                @include sizes(auto, 45px);  
+            }
+        
+            #whatsapp-img{
+                margin-left: 5px;
+                margin-right: 10px;
+                @include sizes(auto, 45px);
+            }
+        }
+    
+    }
+    
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------------*/
+
+
+/*MEDIA QUERY MOBILE 320px*/
+@media only screen and (max-width:320px){
+    
+    h1{
+        font-size: 40px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    h2{
+        font-size: 25px;
+    }
+    h3{
+        font-size: 25px;
+    }
+    
+    /*HEADER 320px*/
+    header{
+        height: 25vh;
+
+        .logo-img{
+            height: 18vh;
+            margin-top: 8px;
+            margin-left: -13px;
+        }
+        .subtitulo{
+            font-size: 20px;
+        }
+    }
+
+    /*NAV 320px*/
+    nav{
+        height: 60px;
+
+        ul li a{
+            font-size: 20px;
+            letter-spacing: 0.004em;
+        }
+    }
+
+    /*MAIN INDEX 320px*/
+    .index{
+        height: 1300px;
+        display: $display;
+        flex-direction: $flexDirection;
+
+        &-grid{
+            display: $display;
+            flex-direction: $flexDirection;
+            @include sizes(95%, 1200px);
+            align-items:center;
+            justify-content: space-between;
+            margin: 30px;
+
+        
+            
+            .newsletter-320-extend{
+                display: $display;
+                flex-direction: $flexDirection;
+                justify-content: space-evenly;
+                align-items: $align-items;
+            }
+        
+            .newsletter{
+                grid-area: a5;
+                @extend .newsletter-320-extend;
+        
+                &-form{
+                    @extend .newsletter-320-extend;
+        
+                    & div{
+                        @extend .newsletter-320-extend;
+                    }
+                }
             }
         }
     }
 
 
 
-        /*FOOTER*/
+
+        /*MAIN Agenda 320px*/
+        .agenda{
+            height: 4600px;
+
+            &-cards{
+                @include sizes(95%, 4500px);
+
+
+                & .card{
+                    width: 20rem;
+                }
+            }
+        }
+
+        /*MAIN Galeria 320px*/
+
+        .galeria{
+            height: 2475px;
+
+            &-grid{
+                height: 2350px;
+                margin-left: 0px;
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(9, 1fr);
+                grid-template-areas:"a1"
+                                    "a2"
+                                    "a3"
+                                    "a4"
+                                    "a7"
+                                    "a7"
+                                    "a5"
+                                    "a6"
+                                    "a8";
+                justify-content: center;
+
+
+            & #foto07{
+                margin-top: 0;
+            }
+            }
+        }
+
+
+
+    /*MAIN Almacen 320px*/
+
+    .almacen{
+        height: 600px;
+
+        &-section{
+
+            &-parrafo{
+                width: 95%;
+                text-align: justify;
+                justify-content: center;
+                font-size: 15px;
+                }
+
+            &-formLink{
+                width: 99vw;
+
+                & img{
+                    width: 100%;
+                    justify-self: center;
+                    margin: 0;
+                }
+            }
+            &-heading{
+                font-size: 25px;
+                text-align: center;
+            }
+
+            &-instagram img{
+                bottom: 20px;
+                margin-bottom: 25px;
+                height: 50px;
+            }
+        }
+    }
+
+        /*MAIN Contacto 320px*/
+    .contacto{
+        height: 1000px;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        &-section{
+            @include sizes(95%, 900px);
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+            &-formulario{
+
+                &-textarea{
+                    width: 95vw;
+                    max-height: 30vh;
+                }
+                &-email{
+                    width: 95%;
+                }
+            }
+
+            &-ubicacion{
+                @include sizes(95%, 480px);
+                margin-left: 7px;
+            }
+        }
+    }
+    
+
+
+        /*FOOTER 320px*/
 
     footer{
         height: 80px;
@@ -590,10 +1067,12 @@ footer{
             }
         
             #whatsapp-img{
-                margin: 5px;
+                margin-left: 5px;
+                margin-right: 10px;
                 @include sizes(auto, 40px);  
             }
         }
     
     }
+    
 }
